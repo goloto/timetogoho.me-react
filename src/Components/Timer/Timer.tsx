@@ -3,13 +3,14 @@ import React from 'react';
 function Timer() {
   return(
     <div className='timer'>
-      <TimerDescription />
+      {!window.matchMedia('max-aspect-ratio: 8 / 7').matches && <TimerDescription />}
+      {window.matchMedia('max-aspect-ratio: 8 / 7').matches && <TimerDescription />}
       <Hours />
-      <TimerDescription />
+      {window.matchMedia('max-aspect-ratio: 8 / 7').matches && <TimerDescription />}
       <Minutes />
-      <TimerDescription />
+      {window.matchMedia('max-aspect-ratio: 8 / 7').matches && <TimerDescription />}
       <Seconds />
-      <TimerDescription />
+      {window.matchMedia('max-aspect-ratio: 8 / 7').matches && <TimerDescription />}
     </div>
   );
 }
