@@ -1,16 +1,20 @@
 import React from 'react';
 
 function Timer() {
+  const smallWindow = window.matchMedia('max-aspect-ratio: 9 / 16').matches;
+  const mediumWindow = window.matchMedia('max-aspect-ratio: 8 / 7').matches;
+  const bigWindow = !mediumWindow && !smallWindow;
+
   return(
     <div className='timer'>
-      {!window.matchMedia('max-aspect-ratio: 8 / 7').matches && <TimerDescription />}
-      {window.matchMedia('max-aspect-ratio: 8 / 7').matches && <TimerDescription />}
+      {mediumWindow && <TimerDescription />}
+      {(bigWindow || smallWindow) && <TimerDescription />}
       <Hours />
-      {window.matchMedia('max-aspect-ratio: 8 / 7').matches && <TimerDescription />}
+      {(bigWindow || smallWindow) && <TimerDescription />}
       <Minutes />
-      {window.matchMedia('max-aspect-ratio: 8 / 7').matches && <TimerDescription />}
+      {(bigWindow || smallWindow) && <TimerDescription />}
       <Seconds />
-      {window.matchMedia('max-aspect-ratio: 8 / 7').matches && <TimerDescription />}
+      {(bigWindow || smallWindow) &&  <TimerDescription />}
     </div>
   );
 }
