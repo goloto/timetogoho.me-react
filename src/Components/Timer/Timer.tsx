@@ -1,4 +1,5 @@
 import React from 'react';
+import { TimerDescription } from '../TimerDescription/TimerDescription';
 
 function Timer() {
   const smallWindow = window.matchMedia('max-aspect-ratio: 9 / 16').matches;
@@ -7,14 +8,14 @@ function Timer() {
 
   return(
     <div className='timer'>
-      {mediumWindow && <TimerDescription />}
-      {(bigWindow || smallWindow) && <TimerDescription />}
+      {mediumWindow && <TimerDescription text={'time to go home'} />}
+      {(bigWindow || smallWindow) && <TimerDescription text={'time'} />}
       <Hours />
-      {(bigWindow || smallWindow) && <TimerDescription />}
+      {(bigWindow || smallWindow) && <TimerDescription text={'to'} />}
       <Minutes />
-      {(bigWindow || smallWindow) && <TimerDescription />}
+      {(bigWindow || smallWindow) && <TimerDescription text={'go'} />}
       <Seconds />
-      {(bigWindow || smallWindow) &&  <TimerDescription />}
+      {(bigWindow || smallWindow) &&  <TimerDescription text={'home'} />}
     </div>
   );
 }
