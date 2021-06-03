@@ -1,5 +1,6 @@
 import React from 'react';
 import { TimerDescription } from '../TimerDescription/TimerDescription';
+import { Hours } from '../Hours/Hours';
 
 function Timer() {
   const smallWindow = window.matchMedia('max-aspect-ratio: 9 / 16').matches;
