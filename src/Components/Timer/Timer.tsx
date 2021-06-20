@@ -12,14 +12,36 @@ export function Timer() {
 
   return(
     <div className='timer'>
-      {mediumWindow && <TimerDescription text={isWorkingDay ? 'time to go home' : 'time until working day'} />}
-      {(bigWindow || smallWindow) && <TimerDescription text={'time'} />}
+
+      {mediumWindow
+        && <TimerDescription>
+          {isWorkingDay ? 'time to go home' : 'time until working day'}
+        </TimerDescription>}
+
+      {(bigWindow || smallWindow)
+        && <TimerDescription>time</TimerDescription>}
+
       <Hours />
-      {(bigWindow || smallWindow) && <TimerDescription text={isWorkingDay ? 'to' : 'until'} />}
+
+      {(bigWindow || smallWindow)
+        && <TimerDescription>
+          {isWorkingDay ? 'to' : 'until'}
+        </TimerDescription>}
+
       <Minutes />
-      {(bigWindow || smallWindow) && <TimerDescription text={isWorkingDay ? 'go' : 'working'} />}
+
+      {(bigWindow || smallWindow)
+        && <TimerDescription>
+          {isWorkingDay ? 'go' : 'working'}
+        </TimerDescription>}
+
       <Seconds />
-      {(bigWindow || smallWindow) &&  <TimerDescription text={isWorkingDay ? 'home' : 'day'} />}
+
+      {(bigWindow || smallWindow)
+        && <TimerDescription>
+          {isWorkingDay ? 'home' : 'day'}
+        </TimerDescription>}
+
     </div>
   );
 }
