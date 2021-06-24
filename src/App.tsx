@@ -1,5 +1,5 @@
 import React from 'react';
-import { Timer } from "./Components/Timer/Timer";
+import { TimerComponent } from "./Components/Timer/Timer.component";
 import './App.css';
 import styled from "styled-components";
 
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <AppCanvas>
-      <Timer/>
+      <TimerComponent/>
     </AppCanvas>
   );
 }

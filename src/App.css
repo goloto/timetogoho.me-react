@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'viga';
-  src: local('Viga'), url('./Common/Fonts/Viga-Regular.ttf') format('truetype');
+  src: local('Viga'), url('Common/Fonts/Viga-Regular.ttf') format('truetype');
 }
 
 body {
