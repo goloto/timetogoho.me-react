@@ -1,10 +1,10 @@
 import React from 'react';
-import { TimerDescriptionComponent } from '../TimerDescription/TimerDescription.component';
+import { TimerDescription } from '../TimerDescription/TimerDescription.component';
 import { Hours } from '../Hours/Hours.component';
 import { Minutes } from "../Minutes/Minutes.component";
 import { Seconds } from "../Seconds/Seconds.component";
 
-export function TimerComponent() {
+export function Timer() {
   const smallWindow = window.matchMedia('max-aspect-ratio: 9 / 16').matches;
   const mediumWindow = window.matchMedia('max-aspect-ratio: 8 / 7').matches;
   const bigWindow = !mediumWindow && !smallWindow;
@@ -14,33 +14,33 @@ export function TimerComponent() {
     <div className='timer'>
 
       {mediumWindow
-        && <TimerDescriptionComponent>
+        && <TimerDescription>
           {isWorkingDay ? 'time to go home' : 'time until working day'}
-        </TimerDescriptionComponent>}
+        </TimerDescription>}
 
       {(bigWindow || smallWindow)
-        && <TimerDescriptionComponent>time</TimerDescriptionComponent>}
+        && <TimerDescription>time</TimerDescription>}
 
       <Hours />
 
       {(bigWindow || smallWindow)
-        && <TimerDescriptionComponent>
+        && <TimerDescription>
           {isWorkingDay ? 'to' : 'until'}
-        </TimerDescriptionComponent>}
+        </TimerDescription>}
 
       <Minutes />
 
       {(bigWindow || smallWindow)
-        && <TimerDescriptionComponent>
+        && <TimerDescription>
           {isWorkingDay ? 'go' : 'working'}
-        </TimerDescriptionComponent>}
+        </TimerDescription>}
 
       <Seconds />
 
       {(bigWindow || smallWindow)
-        && <TimerDescriptionComponent>
+        && <TimerDescription>
           {isWorkingDay ? 'home' : 'day'}
-        </TimerDescriptionComponent>}
+        </TimerDescription>}
 
     </div>
   );
