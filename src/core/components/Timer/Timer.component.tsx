@@ -3,6 +3,7 @@ import { TimerDescription } from '../TimerDescription/TimerDescription.component
 import { Hours } from '../Hours/Hours.component';
 import { Minutes } from "../Minutes/Minutes.component";
 import { Seconds } from "../Seconds/Seconds.component";
+import styled from "styled-components";
 
 export function Timer() {
   const smallWindow = window.matchMedia('max-aspect-ratio: 9 / 16').matches;
@@ -10,8 +11,14 @@ export function Timer() {
   const bigWindow = !mediumWindow && !smallWindow;
   const isWorkingDay = true;
 
+  const TimerContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 3vw 18vw) 4vw;
+    grid-column-gap: 4vw;
+  `;
+
   return(
-    <div className='timer'>
+    <TimerContainer>
 
       {mediumWindow
         && <TimerDescription>
@@ -42,6 +49,6 @@ export function Timer() {
           {isWorkingDay ? 'home' : 'day'}
         </TimerDescription>}
 
-    </div>
+    </TimerContainer>
   );
 }
