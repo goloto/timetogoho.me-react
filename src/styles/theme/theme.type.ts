@@ -1,8 +1,3 @@
-export interface IThemeChanger {
-  getCurrent(): ITheme,
-  changeTo(theme: string): void,
-}
-
 export interface ITheme {
   colors: IThemeColors,
 }
@@ -17,10 +12,4 @@ export interface IThemeColors {
   buttonBackgroundBlueHover: string,
   buttonBackgroundViolet: string,
   buttonBackgroundVioletHover: string,
-}
-
-export interface IFontSizes {
-  main: string,
-  second: string,
-  third: string,
 }
