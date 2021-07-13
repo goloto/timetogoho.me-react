@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
+import {useThemeColors} from "../../hooks/useThemeColors.hook";
+import {fontSizes} from "../../../styles/theme/constants/fontSizes.constant";
 
 export function TimerDescription(props: {children: string}) {
+  const colors = useThemeColors();
   const Container = styled.div`
     display: flex;
     justify-content: center;
@@ -11,9 +14,9 @@ export function TimerDescription(props: {children: string}) {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--soft-color_2);
-    font-size: var(--third-font-size);
-    line-height: var(--third-font-size);
+    color: ${colors.textSoft};
+    font-size: ${fontSizes.sm};
+    line-height: ${fontSizes.sm};
     text-transform: uppercase;
   `;
 
