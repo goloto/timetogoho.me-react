@@ -1,12 +1,14 @@
+import '../../../styles/app.css';
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styled from "styled-components";
 import About from "../../../containers/pages/about/about.page";
 import { Timer } from "../Timer/Timer.component";
-import '../../../styles/app.css';
-import styled from "styled-components";
+import Cookies from "../../../containers/pages/cookies/cookies.page";
+import {useThemeColors} from "../../hooks/useThemeColors.hook";
 
 function App() {
+  const colors = useThemeColors();
   const AppCanvas = styled.div`
     display: flex;
     flex-direction: column;
