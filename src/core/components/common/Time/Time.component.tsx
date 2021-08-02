@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from "styled-components";
-import {fontSizes} from "../../../../styles/theme/constants/fontSizes.constant";
-import {IThemeColors} from "../../../../styles/theme/theme.type";
+import React, { FC } from 'react';
+import styled from 'styled-components';
+import { fontSizes } from '../../../../styles/theme/constants/fontSizes.constant';
+import { IThemeColors } from '../../../../styles/theme/theme.type';
 
-interface ITimeProps extends React.Props<any>{
+interface ITimeProps {
   colors: IThemeColors
 }
 
@@ -13,8 +13,10 @@ const Component = styled.div`
   color: ${props => props.color};
 `;
 
-export default function Time({ colors }: ITimeProps) {
+const Time: FC<ITimeProps> = ({ colors }) => {
   return(
     <Component color={colors.background}></Component>
   );
 }
+
+export default Time;
