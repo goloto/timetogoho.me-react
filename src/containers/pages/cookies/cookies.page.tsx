@@ -1,4 +1,4 @@
-import {Page} from "../../../core/styled/page/Page.component";
+import {Page} from "../../../core/styled/page/page.styled";
 
 function Cookies() {
   return (
