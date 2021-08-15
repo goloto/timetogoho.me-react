@@ -1,4 +1,4 @@
-import {ITheme, IThemeColors} from "../theme.type";
+import { ITheme, IThemeColors } from '../theme.type';
 
 const darkColors: IThemeColors = {
   background: `rgb(240, 240, 250)`,

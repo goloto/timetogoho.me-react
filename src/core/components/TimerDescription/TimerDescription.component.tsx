@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {useThemeColors} from "../../hooks/useThemeColors.hook";
-import {fontSizes} from "../../../styles/theme/constants/fontSizes.constant";
+import { useThemeColors } from '../../hooks/useThemeColors.hook';
+import { fontSizes } from '../../../styles/theme/constants/fontSizes.constant';
 
 export function TimerDescription(props: {children: string}) {
   const colors = useThemeColors();
